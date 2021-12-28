@@ -15,3 +15,61 @@ code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
         monospace;
 }
+
+/* Global */
+.section {
+    @apply w-full min-h-screen flex;
+}
+
+.button-base {
+    @apply px-4 py-3 rounded-full font-medium;
+}
+
+.button-navy {
+    @apply bg-navy border-2 border-white;
+}
+
+.button-navy:hover {
+    @apply bg-white text-navy;
+}
+
+.button-gray {
+    @apply bg-gray border-2 border-gray;
+}
+
+.button-gray:hover {
+    @apply bg-blue text-white border-white;
+}
+
+/* Navbar */
+.navbar {
+    height: 60px;
+    transition: top 0.6s;
+}
+
+.show-nav {
+    top: 0;
+}
+
+.hide-nav {
+    top: -60px;
+}
+
+.nav-links li {
+    @apply px-2 cursor-pointer;
+}
+
+/* Home */
+.landing-info > div {
+    @apply my-4;
+}
+
+/* About */
+
+.about-skills {
+    @apply w-1/2 flex items-center;
+}
+
+.icon {
+    @apply h-5 mr-1;
+}

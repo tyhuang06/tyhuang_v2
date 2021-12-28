@@ -1,7 +1,13 @@
+import Navbar from "./components/Navbar";
+import Landing from "./components/Landing";
+import About from "./components/About";
+
 function App() {
     return (
-        <div className="Container">
-            <div className="text-3xl">Hello World</div>
+        <div className="main">
+            <Navbar />
+            <Landing />
+            <About />
         </div>
     );
 }

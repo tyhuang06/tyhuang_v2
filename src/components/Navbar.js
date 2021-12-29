@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-scroll";
 
 const Navbar = () => {
     const [prevScrollPos, setPrevScrollPos] = useState(0);
@@ -28,9 +29,30 @@ const Navbar = () => {
         >
             <div className="flex w-full justify-between items-center mx-10">
                 <div className="flex text-2xl">Emile Huang</div>
-                <ul className="nav-links flex flex-row">
-                    <li>Home</li>
-                    <li>About</li>
+                <ul className="nav-links flex flex-row h-full items-center">
+                    <li>
+                        <Link
+                            activeClass="active"
+                            to="landing"
+                            spy={true}
+                            smooth={true}
+                            offset={-60}
+                            duration={1000}
+                        >
+                            Home
+                        </Link>
+                    </li>
+                    <li>
+                        <Link
+                            activeClass="active"
+                            to="about"
+                            spy={true}
+                            smooth={true}
+                            duration={1000}
+                        >
+                            About
+                        </Link>
+                    </li>
                     <li>Projects</li>
                     <li>Contact</li>
                 </ul>

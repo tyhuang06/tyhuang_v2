@@ -1,16 +1,30 @@
 import React from "react";
 import { CheckIcon } from "@heroicons/react/solid";
+import aboutPic from "../assets/about.jpg";
 
 const About = () => {
     return (
         <div id="about" className="section bg-white text-shark">
-            <div className="flex flex-col w-full items-center justify-center my-16">
-                <div className="text-4xl border-b-2 border-navy pb-3 mb-14">
-                    About me
+            <div className="flex flex-col w-full items-center my-36">
+                <div className="text-4xl border-b-2 border-blue pb-3 mb-14">
+                    About Me
                 </div>
-                <div className="about-block shadow-xl flex w-4/5 flex-col md:flex-row md:w-2/3">
-                    <div className="about-img w-full md:w-2/5">img place</div>
-                    <div className="w-full p-6 md:w-3/5">
+                <div className="about-block flex px-10 flex-col md:flex-row md:px-20">
+                    <div className="about-img flex justify-center m-6 w-full md:w-2/5">
+                        <div className="relative w-full h-full">
+                            <div className="img-wrapper">
+                                <img
+                                    alt=""
+                                    src={aboutPic}
+                                    width="300"
+                                    height="300"
+                                    className="rounded-lg"
+                                ></img>
+                            </div>
+                            <div className="img-outline"></div>
+                        </div>
+                    </div>
+                    <div className="w-full py-6 md:w-3/5 md:px-6">
                         Hi! I am Emile and I’m currently studying Computer
                         Science at Northeastern University.
                         <br />

@@ -68,7 +68,7 @@ const Projects = () => {
                     {projects.map((project) => (
                         <div
                             key={project.id}
-                            className="flex flex-col w-full md:w-1/2"
+                            className="flex flex-col w-full px-4 py-8 md:w-1/2"
                         >
                             <Project
                                 project={project}

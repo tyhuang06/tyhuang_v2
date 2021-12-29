@@ -2,15 +2,38 @@ import { Dialog, Transition } from "@headlessui/react";
 import React, { Fragment, useState } from "react";
 
 const Project = ({ project, openModal, closeModal }) => {
-    let isOpen = project.isOpen;
+    const [isHovered, setHovered] = useState(false);
+
+    const onHover = () => {
+        setHovered(true);
+    };
+
+    const onHoverLeave = () => {
+        setHovered(false);
+    };
 
     return (
         <>
-            <div className="project-cards flex flex-col h-full rounded-lg m-4 bg-white text-shark">
-                <div
-                    className="img-wrapper"
-                    style={{ backgroundImage: `url(${project.img})` }}
-                ></div>
+            <div
+                className={`project-cards ${isHovered ? "hovered" : ""}`}
+                onMouseEnter={onHover}
+                onMouseLeave={onHoverLeave}
+            >
+                <div className="img-wrapper flex justify-center self-center">
+                    <div
+                        className="img"
+                        style={{ backgroundImage: `url(${project.img})` }}
+                    ></div>
+                    <div className={`show-more ${isHovered ? "hovered" : ""}`}>
+                        <button
+                            type="button"
+                            onClick={() => openModal(project.id)}
+                            className="button-box button-hover-light focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75"
+                        >
+                            Learn More
+                        </button>
+                    </div>
+                </div>
                 <div className="card-text flex-grow p-4">
                     <div className="text-navy font-bold text-sm">
                         {project.skills}
@@ -18,7 +41,7 @@ const Project = ({ project, openModal, closeModal }) => {
                     <div className="font-bold text-xl my-2">{project.name}</div>
                     <div className="">{project.summary}</div>
                 </div>
-                <div className="card-footer pb-2 pr-4 flex justify-end">
+                {/* <div className="card-footer pb-2 pr-4 flex justify-end">
                     <button
                         type="button"
                         onClick={() => openModal(project.id)}
@@ -26,10 +49,10 @@ const Project = ({ project, openModal, closeModal }) => {
                     >
                         Show More
                     </button>
-                </div>
+                </div> */}
             </div>
 
-            <Transition appear show={isOpen} as={Fragment}>
+            <Transition appear show={project.isOpen} as={Fragment}>
                 <Dialog
                     as="div"
                     className="fixed inset-0 z-10 overflow-y-auto"

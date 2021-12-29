@@ -24,6 +24,22 @@ code {
 .button-base {
     @apply px-4 py-3 rounded-full font-medium;
     width: fit-content;
+    transition: 0.3s;
+}
+
+.button-box {
+    @apply px-4 py-3 font-medium text-lg;
+    width: fit-content;
+    height: fit-content;
+    transition: 0.3s;
+}
+
+.button-hover-light {
+    @apply text-shark border-2 border-blue;
+}
+
+.button-hover-light:hover {
+    @apply bg-blue text-white;
 }
 
 .button-navy {
@@ -96,14 +112,35 @@ code {
 }
 
 /* Projects */
-.project-cards .img-wrapper {
-    @apply flex w-full bg-cover bg-center rounded-lg shadow-lg bg-blue;
-    height: 30vh;
-    transition: 0.6s;
+.project-cards {
+    @apply flex flex-col h-full w-full rounded-lg bg-white text-shark relative top-0;
+    transition: 0.3s;
 }
 
-.project-cards .img-wrapper:hover {
-    @apply bg-contain bg-no-repeat;
+.project-cards.hovered {
+    top: -25px;
+}
+
+.project-cards .img-wrapper {
+    @apply w-11/12;
+    height: 28vh;
+}
+
+.project-cards .img {
+    @apply flex bg-cover bg-center rounded-lg shadow-2xl bg-blue w-11/12 absolute;
+    top: -25px;
+    height: 30vh;
+}
+
+.project-cards .show-more {
+    @apply opacity-0 rounded-lg w-11/12 absolute bg-white bg-opacity-90 flex justify-center items-center;
+    top: -25px;
+    height: 30vh;
+    transition: 0.3s;
+}
+
+.project-cards .show-more.hovered {
+    @apply opacity-100;
 }
 
 @media screen and (min-width: 768px) {

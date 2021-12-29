@@ -23,18 +23,19 @@ code {
 
 .button-base {
     @apply px-4 py-3 rounded-full font-medium;
+    width: fit-content;
 }
 
 .button-navy {
-    @apply bg-navy border-2 border-white;
+    @apply bg-navy text-white border-2 border-white;
 }
 
 .button-navy:hover {
-    @apply bg-white text-navy;
+    @apply bg-white text-navy border-navy;
 }
 
 .button-gray {
-    @apply bg-gray border-2 border-gray;
+    @apply bg-gray text-white border-2 border-gray;
 }
 
 .button-gray:hover {
@@ -42,7 +43,7 @@ code {
 }
 
 .top-btn {
-    @apply fixed bg-blue rounded-full p-1;
+    @apply fixed bg-blue rounded-full p-1 z-20;
     bottom: 30px;
     right: 30px;
     height: 40px;
@@ -51,6 +52,7 @@ code {
 
 /* Navbar */
 .navbar {
+    @apply z-20;
     height: 60px;
     transition: top 0.6s;
 }
@@ -81,20 +83,26 @@ code {
 }
 
 /* About */
-.about-skills {
+#about .about-skills {
     @apply w-1/2 flex items-center;
 }
 
-.img-wrapper {
+#about .img-wrapper {
     width: 250px;
 }
 
-.icon {
+#about .icon {
     @apply h-5 mr-1;
 }
 
+/* Projects */
+.project-cards .img-wrapper {
+    @apply flex w-full bg-cover bg-center rounded-lg shadow-lg;
+    height: 30vh;
+}
+
 @media screen and (min-width: 768px) {
-    .img-outline {
+    #about .img-outline {
         @apply border-2 border-blue block absolute rounded-lg;
         width: 300px;
         height: 324px;
@@ -102,14 +110,14 @@ code {
         right: 50px;
     }
 
-    .img-wrapper {
+    #about .img-wrapper {
         @apply absolute z-10 top-0;
         right: 75px;
         transition: 0.6s;
         width: 300px;
     }
 
-    .img-wrapper:hover {
+    #about .img-wrapper:hover {
         top: 15px;
         right: 60px;
     }

@@ -53,7 +53,17 @@ const Navbar = () => {
                             About
                         </Link>
                     </li>
-                    <li>Projects</li>
+                    <li>
+                        <Link
+                            activeClass="active"
+                            to="projects"
+                            spy={true}
+                            smooth={true}
+                            duration={1000}
+                        >
+                            Projects
+                        </Link>
+                    </li>
                     <li>Contact</li>
                 </ul>
             </div>

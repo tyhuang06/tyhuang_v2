@@ -1,6 +1,7 @@
 import Navbar from "./components/Navbar";
 import Landing from "./components/Landing";
 import About from "./components/About";
+import Projects from "./components/Projects";
 import { animateScroll as scroll } from "react-scroll";
 import { ChevronDoubleUpIcon } from "@heroicons/react/solid";
 
@@ -17,6 +18,7 @@ function App() {
             <Navbar />
             <Landing />
             <About />
+            <Projects />
         </div>
     );
 }

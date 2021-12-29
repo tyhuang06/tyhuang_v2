@@ -64,11 +64,13 @@ const Projects = () => {
                 <div className="text-4xl text-white border-b-2 border-blue pb-3 mb-14">
                     Projects
                 </div>
-                <div className="flex w-full flex-wrap px-10 md:px-20">
+                <div className="flex w-full flex-wrap px-10 md:px-24">
                     {projects.map((project) => (
-                        <div className="flex flex-col w-full md:w-1/2">
+                        <div
+                            key={project.id}
+                            className="flex flex-col w-full md:w-1/2"
+                        >
                             <Project
-                                key={project.id}
                                 project={project}
                                 openModal={openModal}
                                 closeModal={closeModal}

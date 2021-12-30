@@ -142,7 +142,11 @@ code {
 
 /* Contact */
 .contact-form .wrapper {
-    @apply flex w-full text-shark relative;
+    @apply flex flex-col w-full text-shark relative;
+}
+
+.contact-form .errorMessage {
+    @apply pl-2 text-red-600;
 }
 
 .contact-form .input-wrapper {

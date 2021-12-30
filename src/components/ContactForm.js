@@ -1,5 +1,8 @@
-import React, { useState } from "react";
+import React, { useRef } from "react";
 import { useForm } from "react-hook-form";
+import emailjs from "@emailjs/browser";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.min.css";
 
 const ContactForm = () => {
     const {
@@ -9,19 +12,51 @@ const ContactForm = () => {
         formState: { errors },
     } = useForm();
 
-    const onSubmit = async (data) => {
-        const { name, email, subject, message } = data;
-        console.log(data);
+    const form = useRef();
+
+    const toastifySuccess = () => {
+        toast("Email sent!", {
+            position: "top-right",
+            autoClose: 5000,
+            hideProgressBar: true,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: false,
+            className: "send-mail-toast",
+            toastId: "sendMailToast",
+        });
+    };
+
+    const onSubmit = async () => {
+        try {
+            await emailjs.sendForm(
+                process.env.REACT_APP_SERVICE_ID,
+                process.env.REACT_APP_TEMPLATE_ID,
+                form.current,
+                process.env.REACT_APP_USER_ID
+            );
+
+            toastifySuccess();
+            reset();
+        } catch (e) {
+            console.log(e);
+        }
     };
 
     return (
         <div className="contact-form flex w-full">
             <form
                 id="contact-form"
+                ref={form}
                 className="flex flex-col w-full bg-white m-6 px-4 pt-6 rounded-lg"
                 onSubmit={handleSubmit(onSubmit)}
             >
                 <div className="wrapper input-wrapper">
+                    {errors.name && (
+                        <span className="errorMessage">
+                            {errors.name.message}
+                        </span>
+                    )}
                     <input
                         type="text"
                         name="name"
@@ -39,13 +74,13 @@ const ContactForm = () => {
                     ></input>
 
                     <div className="input-slider"></div>
-                    {errors.name && (
-                        <span className="errorMessage">
-                            {errors.name.message}
-                        </span>
-                    )}
                 </div>
                 <div className="wrapper input-wrapper">
+                    {errors.email && (
+                        <span className="errorMessage">
+                            Please enter a valid email address
+                        </span>
+                    )}
                     <input
                         type="text"
                         name="email"
@@ -58,13 +93,13 @@ const ContactForm = () => {
                     ></input>
 
                     <div className="input-slider"></div>
-                    {errors.email && (
-                        <span className="errorMessage">
-                            Please enter a valid email address
-                        </span>
-                    )}
                 </div>
                 <div className="wrapper input-wrapper">
+                    {errors.subject && (
+                        <span className="errorMessage">
+                            {errors.subject.message}
+                        </span>
+                    )}
                     <input
                         type="text"
                         name="subject"
@@ -82,13 +117,13 @@ const ContactForm = () => {
                     ></input>
 
                     <div className="input-slider"></div>
-                    {errors.subject && (
-                        <span className="errorMessage">
-                            {errors.subject.message}
-                        </span>
-                    )}
                 </div>
                 <div className="wrapper textarea-wrapper flex-grow">
+                    {errors.message && (
+                        <span className="errorMessage">
+                            Please enter a message
+                        </span>
+                    )}
                     <textarea
                         rows={6}
                         name="message"
@@ -100,21 +135,17 @@ const ContactForm = () => {
                     ></textarea>
 
                     <div className="input-slider"></div>
-                    {errors.message && (
-                        <span className="errorMessage">
-                            Please enter a message
-                        </span>
-                    )}
                 </div>
                 <div className="wrapper justify-end my-4">
                     <button
                         type="submit"
-                        className="button-base button-hover-light"
+                        className="button-base button-hover-light self-end"
                     >
                         Send Message
                     </button>
                 </div>
             </form>
+            <ToastContainer />
         </div>
     );
 };

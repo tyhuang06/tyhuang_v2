@@ -22,15 +22,12 @@ code {
 }
 
 .button-base {
-    @apply px-4 py-3 rounded-full font-medium;
-    width: fit-content;
+    @apply px-4 py-3 rounded-full font-medium w-fit;
     transition: 0.3s;
 }
 
 .button-box {
-    @apply px-4 py-3 font-medium text-lg;
-    width: fit-content;
-    height: fit-content;
+    @apply px-4 py-3 font-medium text-lg w-fit h-fit;
     transition: 0.3s;
 }
 
@@ -141,6 +138,36 @@ code {
 
 .project-cards .show-more.hovered {
     @apply opacity-100;
+}
+
+/* Contact */
+.contact-form .wrapper {
+    @apply flex w-full text-shark relative;
+}
+
+.contact-form .input-wrapper {
+    @apply mb-4;
+}
+
+.contact-form input,
+.contact-form textarea {
+    @apply w-full pl-2 rounded-xl outline-none;
+}
+
+.contact-form .input-slider {
+    @apply w-0 block absolute left-0 bottom-0 rounded-xl border-b-4 border-blue;
+    content: "";
+    height: 10px;
+    transition: width 0.2s ease-in;
+}
+
+.contact-form input:focus + .input-slider,
+.contact-form textarea:focus + .input-slider {
+    @apply w-full;
+}
+
+.contact-form .wrapper input {
+    height: 40px;
 }
 
 @media screen and (min-width: 768px) {

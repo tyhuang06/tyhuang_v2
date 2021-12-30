@@ -48,6 +48,7 @@ const Navbar = () => {
                             to="about"
                             spy={true}
                             smooth={true}
+                            offset={30}
                             duration={1000}
                         >
                             About
@@ -59,12 +60,24 @@ const Navbar = () => {
                             to="projects"
                             spy={true}
                             smooth={true}
+                            offset={30}
                             duration={1000}
                         >
                             Projects
                         </Link>
                     </li>
-                    <li>Contact</li>
+                    <li>
+                        <Link
+                            activeClass="active"
+                            to="contact"
+                            spy={true}
+                            smooth={true}
+                            offset={30}
+                            duration={1000}
+                        >
+                            Contact
+                        </Link>
+                    </li>
                 </ul>
             </div>
         </div>

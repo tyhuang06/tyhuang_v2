@@ -8,7 +8,7 @@ module.exports = {
                 blue: "#7BADC2",
                 navy: "#344D94",
                 shark: "#171A27",
-                sea: "#1D2026",
+                sea: "#040507",
             },
         },
     },

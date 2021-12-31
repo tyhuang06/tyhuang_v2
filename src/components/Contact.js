@@ -1,5 +1,6 @@
 import React from "react";
 import ContactForm from "./ContactForm";
+import Map from "./Map";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
     faGithub,
@@ -52,6 +53,9 @@ const Contact = () => {
                                 >
                                     <FontAwesomeIcon icon={faFacebookF} />
                                 </a>
+                            </div>
+                            <div className="">
+                                <Map />
                             </div>
                         </div>
                     </div>

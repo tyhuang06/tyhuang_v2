@@ -175,6 +175,15 @@ code {
     @apply text-3xl text-blue;
 }
 
+.map-container {
+    @apply rounded-lg;
+    height: 300px;
+}
+
+.mapboxgl-map {
+    @apply rounded-lg;
+}
+
 .contact-form .wrapper {
     @apply flex flex-col w-full text-shark relative;
 }

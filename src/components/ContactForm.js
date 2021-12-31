@@ -32,10 +32,10 @@ const ContactForm = () => {
     const onSubmit = async () => {
         try {
             await emailjs.sendForm(
-                process.env.REACT_APP_SERVICE_ID,
-                process.env.REACT_APP_TEMPLATE_ID,
+                process.env.REACT_APP_EMAILJS_SERVICE_ID,
+                process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
                 form.current,
-                process.env.REACT_APP_USER_ID
+                process.env.REACT_APP_EMAILJS_USER_ID
             );
 
             toastifySuccess();
@@ -46,7 +46,7 @@ const ContactForm = () => {
     };
 
     return (
-        <div className="contact-form flex w-full">
+        <div className="contact-form flex w-full h-full">
             <form
                 id="contact-form"
                 ref={form}

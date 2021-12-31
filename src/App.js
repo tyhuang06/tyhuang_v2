@@ -4,6 +4,8 @@ import About from "./components/About";
 import Projects from "./components/Projects";
 import Contact from "./components/Contact";
 import { animateScroll as scroll } from "react-scroll";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faAngleDoubleUp } from "@fortawesome/free-solid-svg-icons";
 import { ChevronDoubleUpIcon } from "@heroicons/react/solid";
 
 function App() {
@@ -13,8 +15,8 @@ function App() {
 
     return (
         <div className="main">
-            <div className="top-btn">
-                <ChevronDoubleUpIcon onClick={scrollToTop} />
+            <div className="top-btn" onClick={scrollToTop}>
+                <FontAwesomeIcon icon={faAngleDoubleUp} className="text-2xl" />
             </div>
             <Navbar />
             <Landing />

@@ -1,6 +1,11 @@
 import React from "react";
-import { CheckIcon } from "@heroicons/react/solid";
 import aboutPic from "../assets/about.jpg";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+    faJsSquare,
+    faPython,
+    faReact,
+} from "@fortawesome/free-brands-svg-icons";
 
 const About = () => {
     return (
@@ -45,21 +50,33 @@ const About = () => {
                         <div className="flex flex-col w-full text-navy font-medium mt-2">
                             <div className="flex w-full">
                                 <div className="about-skills">
-                                    <CheckIcon className="icon" />
+                                    <FontAwesomeIcon
+                                        icon={faJsSquare}
+                                        className="mr-2"
+                                    />
                                     Javascript
                                 </div>
                                 <div className="about-skills">
-                                    <CheckIcon className="icon" />
+                                    <FontAwesomeIcon
+                                        icon={faPython}
+                                        className="mr-2"
+                                    />
                                     Python
                                 </div>
                             </div>
                             <div className="flex w-full">
                                 <div className="about-skills">
-                                    <CheckIcon className="icon" />
+                                    <FontAwesomeIcon
+                                        icon={faReact}
+                                        className="mr-2"
+                                    />
                                     React.js
                                 </div>
                                 <div className="about-skills">
-                                    <CheckIcon className="icon" />
+                                    <FontAwesomeIcon
+                                        icon={faPython}
+                                        className="mr-2"
+                                    />
                                     Django
                                 </div>
                             </div>

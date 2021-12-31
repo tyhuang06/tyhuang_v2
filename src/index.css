@@ -56,11 +56,15 @@ code {
 }
 
 .top-btn {
-    @apply fixed bg-blue rounded-full p-1 z-20;
+    @apply fixed flex items-center justify-center bg-blue rounded-full p-1 z-20;
     bottom: 30px;
-    right: 30px;
-    height: 40px;
-    width: 40px;
+    right: 20px;
+    height: 50px;
+    width: 50px;
+}
+
+.top-btn:hover {
+    @apply text-white;
 }
 
 /* Navbar */
@@ -141,6 +145,22 @@ code {
 }
 
 /* Contact */
+.social-icons-wrapper {
+    @apply flex items-center;
+    height: 40px;
+}
+
+.social-icons {
+    @apply flex items-center text-2xl;
+    height: 40px;
+    width: 40px;
+    transition: 0.3s;
+}
+
+.social-icons:hover {
+    @apply text-3xl text-blue;
+}
+
 .contact-form .wrapper {
     @apply flex flex-col w-full text-shark relative;
 }

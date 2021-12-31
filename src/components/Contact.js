@@ -18,8 +18,13 @@ const Contact = () => {
                 </div>
                 <div className="flex flex-col md:flex-row w-4/5 bg-sea text-white rounded-lg shadow-xl">
                     <div className="left w-full md:w-1/2">
-                        <div className="m-6">
-                            <div className="text-2xl"></div>
+                        <div className="flex flex-col h-full p-6">
+                            <div className="contact-text text-lg flex-grow">
+                                <p>
+                                    Interested in working with me or just wanna
+                                    chat? Send me a message!
+                                </p>
+                            </div>
                             <div className="social-icons-wrapper">
                                 <a
                                     className="social-icons"

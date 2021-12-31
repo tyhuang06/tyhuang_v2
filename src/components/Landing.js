@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-scroll";
 
 const Landing = () => {
     return (
@@ -25,7 +26,16 @@ const Landing = () => {
                     </div>
                     <div className="buttons_container">
                         <button className="button-base button-navy mr-4">
-                            Contact Me
+                            <Link
+                                activeClass="active"
+                                to="contact"
+                                spy={true}
+                                smooth={true}
+                                offset={30}
+                                duration={1000}
+                            >
+                                Contact Me
+                            </Link>
                         </button>
                         <button className="button-base button-gray">
                             Grab Resume

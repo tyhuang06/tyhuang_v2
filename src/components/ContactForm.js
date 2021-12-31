@@ -130,7 +130,7 @@ const ContactForm = () => {
                         rows={6}
                         name="message"
                         placeholder="Message"
-                        className="pt-2"
+                        className="pt-2 h-full"
                         {...register("message", {
                             required: true,
                         })}

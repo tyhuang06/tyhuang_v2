@@ -27,7 +27,7 @@ const Navbar = () => {
                 visible ? "show-nav" : "hide-nav"
             }`}
         >
-            <div className="flex w-full justify-between items-center mx-10">
+            <div className="flex w-full justify-between items-center ml-24 mr-12">
                 <div className="flex text-2xl">Emile Huang</div>
                 <ul className="nav-links flex flex-row h-full items-center">
                     <li>

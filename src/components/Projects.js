@@ -9,35 +9,54 @@ const Projects = () => {
             id: 1,
             name: "React Portfolio",
             skills: "React.js | React Hooks | TailwindCSS",
-            img: projectImg1,
-            summary:
-                "when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries",
+            imgs: [projectImg1, projectImg2],
+            summary: "Personal Website made with React.js",
+            desc: [
+                "Implemented with React.js + React Hooks",
+                "TailwindCSS for styling",
+                "EmailJS + React Hook Form to send email without backend",
+            ],
             isOpen: false,
         },
         {
             id: 2,
             name: "project2",
             skills: "code",
-            img: projectImg2,
+            imgs: [projectImg2],
             summary: "It has survived not only five centuries",
+            desc: [
+                "Implemented with React.js + React Hooks",
+                "TailwindCSS for styling",
+                "EmailJS + React Hook Form to send email without backend",
+            ],
             isOpen: false,
         },
         {
             id: 3,
             name: "project3",
             skills: "code",
-            img: projectImg1,
+            imgs: [projectImg1],
             summary:
                 "when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries",
+            desc: [
+                "Implemented with React.js + React Hooks",
+                "TailwindCSS for styling",
+                "EmailJS + React Hook Form to send email without backend",
+            ],
             isOpen: false,
         },
         {
             id: 4,
             name: "project4",
             skills: "code",
-            img: projectImg1,
+            imgs: [projectImg1],
             summary:
                 "when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries",
+            desc: [
+                "Implemented with React.js + React Hooks",
+                "TailwindCSS for styling",
+                "EmailJS + React Hook Form to send email without backend",
+            ],
             isOpen: false,
         },
     ]);
@@ -59,7 +78,7 @@ const Projects = () => {
     };
 
     return (
-        <div id="projects" className="section bg-shark">
+        <div id="projects" className="section min-h-screen bg-shark">
             <div className="flex flex-col w-full items-center my-36">
                 <div className="text-4xl text-white border-b-2 border-blue pb-3 mb-14">
                     Projects

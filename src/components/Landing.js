@@ -3,7 +3,7 @@ import { Link } from "react-scroll";
 
 const Landing = () => {
     return (
-        <div id="landing" className="section bg-shark text-white">
+        <div id="landing" className="section min-h-screen bg-shark text-white">
             <div className="flex flex-row items-center w-full">
                 <div className="landing-info w-full flex flex-col items-center px-5 md:items-start md:px-40">
                     <div>

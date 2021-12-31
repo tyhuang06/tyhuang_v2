@@ -25,7 +25,7 @@ const Map = () => {
                 <Marker longitude={-71.08} latitude={42.34}>
                     <FontAwesomeIcon
                         icon={faMapMarkerAlt}
-                        className="text-blue text-2xl"
+                        className="text-blue text-3xl"
                     />
                 </Marker>
             </ReactMapGL>

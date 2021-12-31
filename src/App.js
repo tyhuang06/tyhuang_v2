@@ -3,6 +3,7 @@ import Landing from "./components/Landing";
 import About from "./components/About";
 import Projects from "./components/Projects";
 import Contact from "./components/Contact";
+import Footer from "./components/Footer";
 import { animateScroll as scroll } from "react-scroll";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleDoubleUp } from "@fortawesome/free-solid-svg-icons";
@@ -22,6 +23,7 @@ function App() {
             <About />
             <Projects />
             <Contact />
+            <Footer />
         </div>
     );
 }

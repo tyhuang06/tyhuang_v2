@@ -18,7 +18,7 @@ code {
 
 /* Global */
 .section {
-    @apply w-full min-h-screen flex;
+    @apply w-full flex;
 }
 
 .button-base {
@@ -148,7 +148,7 @@ code {
 }
 
 .project-cards .show-more {
-    @apply opacity-0 rounded-lg w-11/12 absolute bg-white bg-opacity-90 flex justify-center items-center;
+    @apply opacity-0 rounded-lg w-11/12 absolute bg-white bg-opacity-80 backdrop-blur-sm flex justify-center items-center;
     top: -25px;
     height: 30vh;
     transition: 0.3s;
@@ -156,6 +156,17 @@ code {
 
 .project-cards .show-more.hovered {
     @apply opacity-100;
+}
+
+.dialog-wrap {
+    width: 700px;
+    max-height: 100vh;
+    height: 85vh;
+}
+
+.carousel .slide img {
+    @apply object-cover;
+    max-height: 45vh;
 }
 
 /* Contact */
@@ -221,6 +232,11 @@ code {
     height: 40px;
 }
 
+/* Footer */
+.footer {
+    height: 80px;
+}
+
 @media screen and (min-width: 768px) {
     #about .img-outline {
         @apply border-2 border-blue block absolute rounded-lg;
@@ -240,5 +256,11 @@ code {
     #about .img-wrapper:hover {
         top: 15px;
         right: 60px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .dialog-wrap {
+        @apply w-full h-screen rounded-none;
     }
 }

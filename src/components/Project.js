@@ -1,5 +1,6 @@
 import { Dialog, Transition } from "@headlessui/react";
 import React, { Fragment, useState } from "react";
+import ImgSwiper from "./ImgSwiper";
 
 const Project = ({ project, openModal, closeModal }) => {
     const [isHovered, setHovered] = useState(false);
@@ -22,7 +23,7 @@ const Project = ({ project, openModal, closeModal }) => {
                 <div className="img-wrapper flex justify-center self-center">
                     <div
                         className="img"
-                        style={{ backgroundImage: `url(${project.img})` }}
+                        style={{ backgroundImage: `url(${project.imgs[0]})` }}
                     ></div>
                     <div className={`show-more ${isHovered ? "hovered" : ""}`}>
                         <button
@@ -41,24 +42,15 @@ const Project = ({ project, openModal, closeModal }) => {
                     <div className="font-bold text-xl my-2">{project.name}</div>
                     <div className="">{project.summary}</div>
                 </div>
-                {/* <div className="card-footer pb-2 pr-4 flex justify-end">
-                    <button
-                        type="button"
-                        onClick={() => openModal(project.id)}
-                        className="button-base button-gray focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75"
-                    >
-                        Show More
-                    </button>
-                </div> */}
             </div>
 
             <Transition appear show={project.isOpen} as={Fragment}>
                 <Dialog
                     as="div"
-                    className="fixed inset-0 z-10 overflow-y-auto"
+                    className="fixed inset-0 z-30 overflow-y-auto"
                     onClose={() => closeModal(project.id)}
                 >
-                    <div className="min-h-screen px-4 text-center">
+                    <div className="flex justify-center items-center min-h-screen">
                         <Transition.Child
                             as={Fragment}
                             enter="ease-out duration-300"
@@ -68,16 +60,9 @@ const Project = ({ project, openModal, closeModal }) => {
                             leaveFrom="opacity-100"
                             leaveTo="opacity-0"
                         >
-                            <Dialog.Overlay className="fixed inset-0" />
+                            <Dialog.Overlay className="fixed inset-0 backdrop-blur-sm" />
                         </Transition.Child>
 
-                        {/* This element is to trick the browser into centering the modal contents. */}
-                        <span
-                            className="inline-block h-screen align-middle"
-                            aria-hidden="true"
-                        >
-                            &#8203;
-                        </span>
                         <Transition.Child
                             as={Fragment}
                             enter="ease-out duration-300"
@@ -87,27 +72,42 @@ const Project = ({ project, openModal, closeModal }) => {
                             leaveFrom="opacity-100 scale-100"
                             leaveTo="opacity-0 scale-95"
                         >
-                            <div className="inline-block w-full max-w-md p-6 my-8 overflow-hidden text-left align-middle transition-all transform bg-white shadow-xl rounded-2xl">
-                                <Dialog.Title
-                                    as="h3"
-                                    className="text-lg font-medium leading-6 text-gray-900"
-                                >
-                                    {project.name}
-                                </Dialog.Title>
-                                <div className="mt-2">
-                                    <p className="text-sm text-gray-500">
-                                        {project.summary}
-                                    </p>
-                                </div>
+                            <div className="dialog-wrap overflow-hidden flex transition-all transform bg-white shadow-xl rounded-2xl">
+                                <div className="flex flex-col h-full w-full dialog-wrapper">
+                                    <div className="">
+                                        <ImgSwiper project={project} />
+                                    </div>
+                                    <div className="flex h-full flex-col mx-4 my-2">
+                                        <Dialog.Title
+                                            as="h3"
+                                            className="mt-2 text-lg font-medium leading-6 text-gray-900"
+                                        >
+                                            {project.name}
+                                        </Dialog.Title>
+                                        <div className="">
+                                            <p className="text-sm text-gray">
+                                                {project.summary}
+                                            </p>
+                                        </div>
 
-                                <div className="mt-4">
-                                    <button
-                                        type="button"
-                                        className="inline-flex justify-center px-4 py-2 text-sm font-medium text-blue-900 bg-blue-100 border border-transparent rounded-md hover:bg-blue-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-blue-500"
-                                        onClick={() => closeModal(project.id)}
-                                    >
-                                        Got it, thanks!
-                                    </button>
+                                        <div className="mt-2 flex-grow">
+                                            {project.desc.map((desc) => (
+                                                <div>{desc}</div>
+                                            ))}
+                                        </div>
+                                    </div>
+
+                                    <div className="mt-4">
+                                        <button
+                                            type="button"
+                                            className="button-base button-navy"
+                                            onClick={() =>
+                                                closeModal(project.id)
+                                            }
+                                        >
+                                            Close
+                                        </button>
+                                    </div>
                                 </div>
                             </div>
                         </Transition.Child>

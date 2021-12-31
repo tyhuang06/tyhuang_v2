@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/tyhuang_v2/static/css/main.88868a86.css",
+    "main.js": "/tyhuang_v2/static/js/main.cdcd8ad8.js",
+    "static/js/787.ca3550e9.chunk.js": "/tyhuang_v2/static/js/787.ca3550e9.chunk.js",
+    "static/media/about2.jpg": "/tyhuang_v2/static/media/about2.0979eb47dc9e6a0fe4c2.jpg",
+    "static/media/about.jpg": "/tyhuang_v2/static/media/about.e3c004102a45c60d316d.jpg",
+    "index.html": "/tyhuang_v2/index.html",
+    "main.88868a86.css.map": "/tyhuang_v2/static/css/main.88868a86.css.map",
+    "main.cdcd8ad8.js.map": "/tyhuang_v2/static/js/main.cdcd8ad8.js.map",
+    "787.ca3550e9.chunk.js.map": "/tyhuang_v2/static/js/787.ca3550e9.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.88868a86.css",
+    "static/js/main.cdcd8ad8.js"
+  ]
+}

@@ -124,7 +124,8 @@ const Project = ({ project, openModal, closeModal }) => {
                                     <div className="mx-6 my-6 flex flex-col md:flex-row">
                                         <div className="link group flex-grow self-center">
                                             {project.link ? (
-                                                <button
+                                                <a
+                                                    href={project.link}
                                                     type="button"
                                                     className="button-box-sm button-hover-light mr-4"
                                                 >
@@ -133,13 +134,14 @@ const Project = ({ project, openModal, closeModal }) => {
                                                         className="mr-2"
                                                     />
                                                     View Site
-                                                </button>
+                                                </a>
                                             ) : (
                                                 ""
                                             )}
 
                                             {project.github ? (
-                                                <button
+                                                <a
+                                                    href={project.github}
                                                     type="button"
                                                     className="button-box-sm button-hover-light"
                                                 >
@@ -148,7 +150,7 @@ const Project = ({ project, openModal, closeModal }) => {
                                                         className="mr-2"
                                                     />
                                                     Github Repo
-                                                </button>
+                                                </a>
                                             ) : (
                                                 ""
                                             )}

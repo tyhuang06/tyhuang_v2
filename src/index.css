@@ -173,6 +173,15 @@ code {
     max-height: 45vh;
 }
 
+.carousel-arrow {
+    @apply text-3xl text-white opacity-70 absolute z-40 cursor-pointer top-0 h-full flex items-center px-6 bg-shark bg-opacity-0;
+    transition: 0.3s;
+}
+
+.carousel-arrow:hover {
+    @apply bg-opacity-20 opacity-100 text-4xl;
+}
+
 /* Contact */
 .contact-text {
     flex-basis: 100px;

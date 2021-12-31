@@ -1,5 +1,7 @@
 import React, { useRef } from "react";
 import { useForm } from "react-hook-form";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faPaperPlane } from "@fortawesome/free-solid-svg-icons";
 import emailjs from "@emailjs/browser";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.min.css";
@@ -15,7 +17,7 @@ const ContactForm = () => {
     const form = useRef();
 
     const toastifySuccess = () => {
-        toast("Email sent!", {
+        toast("Message sent!", {
             position: "top-right",
             autoClose: 5000,
             hideProgressBar: true,
@@ -142,6 +144,7 @@ const ContactForm = () => {
                         className="button-base button-hover-light self-end"
                     >
                         Send Message
+                        <FontAwesomeIcon icon={faPaperPlane} className="ml-2" />
                     </button>
                 </div>
             </form>

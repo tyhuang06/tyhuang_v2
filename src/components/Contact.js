@@ -15,7 +15,7 @@ const Contact = () => {
                 <div className="text-4xl text-shark border-b-2 border-blue pb-3 mb-14">
                     Contact Me
                 </div>
-                <div className="flex flex-col md:flex-row w-4/5 bg-sea text-white rounded-lg">
+                <div className="flex flex-col md:flex-row w-4/5 bg-sea text-white rounded-lg shadow-xl">
                     <div className="left w-full md:w-1/2">
                         <div className="m-6">
                             <div className="text-2xl"></div>

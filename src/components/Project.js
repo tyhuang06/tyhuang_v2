@@ -1,6 +1,13 @@
 import { Dialog, Transition } from "@headlessui/react";
 import React, { Fragment, useState } from "react";
 import ImgSwiper from "./ImgSwiper";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+    faAngleRight,
+    faExternalLinkAlt,
+    faTimes,
+} from "@fortawesome/free-solid-svg-icons";
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
 
 const Project = ({ project, openModal, closeModal }) => {
     const [isHovered, setHovered] = useState(false);
@@ -77,35 +84,83 @@ const Project = ({ project, openModal, closeModal }) => {
                                     <div className="">
                                         <ImgSwiper project={project} />
                                     </div>
-                                    <div className="flex h-full flex-col mx-4 my-2">
-                                        <Dialog.Title
-                                            as="h3"
-                                            className="mt-2 text-lg font-medium leading-6 text-gray-900"
-                                        >
-                                            {project.name}
-                                        </Dialog.Title>
-                                        <div className="">
+                                    <div className="flex h-full flex-col mx-6 mt-4 mb-2">
+                                        <div className="flex items-center justify-between flex-col md:flex-row">
+                                            <Dialog.Title
+                                                as="h3"
+                                                className="mt-2 text-xl font-medium leading-6 text-shark "
+                                            >
+                                                {project.name}
+                                            </Dialog.Title>
+                                            <div className="text-xl mt-2">
+                                                {project.icons.map((icon) => (
+                                                    <FontAwesomeIcon
+                                                        icon={icon}
+                                                        className="text-navy ml-2"
+                                                    />
+                                                ))}
+                                            </div>
+                                        </div>
+
+                                        <div className="flex justify-center md:justify-start">
                                             <p className="text-sm text-gray">
                                                 {project.summary}
                                             </p>
                                         </div>
 
-                                        <div className="mt-2 flex-grow">
+                                        <div className="mt-4 flex-grow text-shark">
                                             {project.desc.map((desc) => (
-                                                <div>{desc}</div>
+                                                <div className="project-desc flex items-center">
+                                                    <FontAwesomeIcon
+                                                        icon={faAngleRight}
+                                                        className="mr-2"
+                                                    />
+                                                    {desc}
+                                                </div>
                                             ))}
                                         </div>
                                     </div>
 
-                                    <div className="mt-4">
+                                    <div className="mx-6 my-6 flex flex-col md:flex-row">
+                                        <div className="link group flex-grow self-center">
+                                            {project.link ? (
+                                                <button
+                                                    type="button"
+                                                    className="button-box-sm button-hover-light mr-4"
+                                                >
+                                                    <FontAwesomeIcon
+                                                        icon={faExternalLinkAlt}
+                                                        className="mr-2"
+                                                    />
+                                                    View Site
+                                                </button>
+                                            ) : (
+                                                ""
+                                            )}
+
+                                            {project.github ? (
+                                                <button
+                                                    type="button"
+                                                    className="button-box-sm button-hover-light"
+                                                >
+                                                    <FontAwesomeIcon
+                                                        icon={faGithub}
+                                                        className="mr-2"
+                                                    />
+                                                    Github Repo
+                                                </button>
+                                            ) : (
+                                                ""
+                                            )}
+                                        </div>
                                         <button
                                             type="button"
-                                            className="button-base button-navy"
+                                            className="flex justify-self-end self-end text-2xl text-lightGray hover:text-gray"
                                             onClick={() =>
                                                 closeModal(project.id)
                                             }
                                         >
-                                            Close
+                                            <FontAwesomeIcon icon={faTimes} />
                                         </button>
                                     </div>
                                 </div>

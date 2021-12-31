@@ -26,6 +26,11 @@ code {
     transition: 0.3s;
 }
 
+.button-box-sm {
+    @apply px-3 py-2 font-medium text-base w-fit h-fit;
+    transition: 0.3s;
+}
+
 .button-box {
     @apply px-4 py-3 font-medium text-lg w-fit h-fit;
     transition: 0.3s;
@@ -160,12 +165,11 @@ code {
 
 .dialog-wrap {
     width: 700px;
-    max-height: 100vh;
-    height: 85vh;
+    max-height: 85vh;
 }
 
 .carousel .slide img {
-    @apply object-cover;
+    @apply object-cover h-auto;
     max-height: 45vh;
 }
 
@@ -261,6 +265,11 @@ code {
 
 @media screen and (max-width: 767px) {
     .dialog-wrap {
-        @apply w-full h-screen rounded-none;
+        @apply w-full h-screen rounded-none max-h-screen;
+    }
+
+    .carousel .slide img {
+        @apply object-cover;
+        height: 45vh;
     }
 }

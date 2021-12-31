@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import Project from "./Project";
+import { faReact, faJs } from "@fortawesome/free-brands-svg-icons";
+import { faCode } from "@fortawesome/free-solid-svg-icons";
 import projectImg1 from "../assets/about2.jpg";
 import projectImg2 from "../assets/about.jpg";
 
@@ -10,12 +12,28 @@ const Projects = () => {
             name: "React Portfolio",
             skills: "React.js | React Hooks | TailwindCSS",
             imgs: [projectImg1, projectImg2],
+            link: "dummy",
+            github: "dummy",
             summary: "Personal Website made with React.js",
             desc: [
-                "Implemented with React.js + React Hooks",
-                "TailwindCSS for styling",
-                "EmailJS + React Hook Form to send email without backend",
+                <div>
+                    Implemented with{" "}
+                    <span className="text-navy">React.js + React Hooks</span>
+                </div>,
+                <div>
+                    Responsive web design using{" "}
+                    <span className="text-navy">Tailwind CSS</span>
+                </div>,
+                <div>
+                    <span className="text-navy">EmailJS</span> to send email
+                    without backend
+                </div>,
+                <div>
+                    <span className="text-navy">Mapbox GL JS</span> to render a
+                    map displaying location
+                </div>,
             ],
+            icons: [faReact, faJs],
             isOpen: false,
         },
         {
@@ -23,12 +41,15 @@ const Projects = () => {
             name: "project2",
             skills: "code",
             imgs: [projectImg2],
+            link: "",
+            github: "",
             summary: "It has survived not only five centuries",
             desc: [
                 "Implemented with React.js + React Hooks",
                 "TailwindCSS for styling",
                 "EmailJS + React Hook Form to send email without backend",
             ],
+            icons: [faCode],
             isOpen: false,
         },
         {
@@ -36,6 +57,8 @@ const Projects = () => {
             name: "project3",
             skills: "code",
             imgs: [projectImg1],
+            link: "",
+            github: "",
             summary:
                 "when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries",
             desc: [
@@ -43,6 +66,7 @@ const Projects = () => {
                 "TailwindCSS for styling",
                 "EmailJS + React Hook Form to send email without backend",
             ],
+            icons: [faCode],
             isOpen: false,
         },
         {
@@ -50,6 +74,8 @@ const Projects = () => {
             name: "project4",
             skills: "code",
             imgs: [projectImg1],
+            link: "",
+            github: "",
             summary:
                 "when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries",
             desc: [
@@ -57,6 +83,7 @@ const Projects = () => {
                 "TailwindCSS for styling",
                 "EmailJS + React Hook Form to send email without backend",
             ],
+            icons: [faCode],
             isOpen: false,
         },
     ]);

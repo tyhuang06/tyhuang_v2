@@ -6,7 +6,6 @@ import Contact from "./components/Contact";
 import { animateScroll as scroll } from "react-scroll";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleDoubleUp } from "@fortawesome/free-solid-svg-icons";
-import { ChevronDoubleUpIcon } from "@heroicons/react/solid";
 
 function App() {
     const scrollToTop = () => {

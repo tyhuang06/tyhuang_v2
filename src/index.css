@@ -107,7 +107,7 @@ code {
 }
 
 .nav-links li a {
-    @apply flex justify-center w-full border-b-4 border-transparent flex items-center h-full;
+    @apply flex justify-center w-full border-b-4 border-transparent items-center h-full;
 }
 
 .nav-links .active {
@@ -173,6 +173,10 @@ code {
 .carousel .slide img {
     @apply object-cover h-auto;
     max-height: 45vh;
+}
+
+.carousel .control-dots .dot {
+    @apply outline-none;
 }
 
 .carousel-arrow {

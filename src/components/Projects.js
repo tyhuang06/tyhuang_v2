@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Project from "./Project";
 import { faReact, faJs } from "@fortawesome/free-brands-svg-icons";
 import { faCode } from "@fortawesome/free-solid-svg-icons";
+
 import projectImg1 from "../assets/about2.jpg";
 import projectImg2 from "../assets/about.jpg";
 
@@ -13,7 +14,7 @@ const Projects = () => {
             skills: "React.js | React Hooks | TailwindCSS",
             imgs: [projectImg1, projectImg2],
             link: "dummy",
-            github: "dummy",
+            github: "https://github.com/tyhuang06/tyhuang_v2",
             summary: "Personal Website made with React.js",
             desc: [
                 <div>

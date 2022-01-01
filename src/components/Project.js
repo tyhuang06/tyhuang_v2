@@ -126,7 +126,8 @@ const Project = ({ project, openModal, closeModal }) => {
                                             {project.link ? (
                                                 <a
                                                     href={project.link}
-                                                    type="button"
+                                                    target="_blank"
+                                                    rel="noreferrer"
                                                     className="button-box-sm button-hover-light mr-4"
                                                 >
                                                     <FontAwesomeIcon
@@ -142,7 +143,8 @@ const Project = ({ project, openModal, closeModal }) => {
                                             {project.github ? (
                                                 <a
                                                     href={project.github}
-                                                    type="button"
+                                                    target="_blank"
+                                                    rel="noreferrer"
                                                     className="button-box-sm button-hover-light"
                                                 >
                                                     <FontAwesomeIcon

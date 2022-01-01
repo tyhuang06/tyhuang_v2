@@ -42,7 +42,7 @@ const Project = ({ project, openModal, closeModal }) => {
                         </button>
                     </div>
                 </div>
-                <div className="card-text flex-grow p-4">
+                <div className="card-text flex-grow py-4 px-8">
                     <div className="text-navy font-bold text-sm">
                         {project.skills}
                     </div>

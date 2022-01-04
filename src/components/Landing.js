@@ -10,7 +10,7 @@ const Landing = () => {
                         <div className="text-5xl flex flex-col md:flex-row">
                             Hi! I'm
                             <span className="text-blue flex-wrap md:pl-2">
-                                Emile
+                                Tzu-Yu
                             </span>
                         </div>
                         <div className="text-3xl mt-4 flex flex-col md:flex-row">

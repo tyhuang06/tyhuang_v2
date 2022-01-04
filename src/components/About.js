@@ -30,8 +30,8 @@ const About = () => {
                         </div>
                     </div>
                     <div className="w-full py-6 md:w-3/5 md:px-6">
-                        Hi! I am Emile and I’m currently studying Computer
-                        Science at Northeastern University.
+                        Hi! I am TY and I’m currently studying Computer Science
+                        at Northeastern University.
                         <br />
                         <br />I was a software engineer intern with BenQ
                         Corporation for one year doing web development. I mostly

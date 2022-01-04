@@ -28,7 +28,7 @@ const Navbar = () => {
             }`}
         >
             <div className="flex w-full justify-between items-center ml-24 mr-12">
-                <div className="flex text-2xl">Emile Huang</div>
+                <div className="flex text-2xl">TY Huang</div>
                 <ul className="nav-links flex flex-row h-full items-center">
                     <li>
                         <Link

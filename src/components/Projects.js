@@ -8,7 +8,7 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 import { faCode } from "@fortawesome/free-solid-svg-icons";
 
-import projectImg1 from "../assets/about2.jpg";
+import projectImg1 from "../assets/placeholder.jpg";
 import portfolioImg1 from "../assets/portfolio_home.png";
 import portfolioImg2 from "../assets/portfolio_projects.png";
 import portfolioImg3 from "../assets/portfolio_project.png";

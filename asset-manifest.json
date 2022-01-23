@@ -1,17 +1,25 @@
 {
   "files": {
     "main.css": "/tyhuang_v2/static/css/main.702fc617.css",
-    "main.js": "/tyhuang_v2/static/js/main.9a3be422.js",
+    "main.js": "/tyhuang_v2/static/js/main.5462c5bc.js",
     "static/js/787.ca3550e9.chunk.js": "/tyhuang_v2/static/js/787.ca3550e9.chunk.js",
     "static/media/about2.jpg": "/tyhuang_v2/static/media/about2.0979eb47dc9e6a0fe4c2.jpg",
     "static/media/about.jpg": "/tyhuang_v2/static/media/about.e3c004102a45c60d316d.jpg",
+    "static/media/portfolio_project.png": "/tyhuang_v2/static/media/portfolio_project.7ffa90dd86fa0d4b447f.png",
+    "static/media/portfolio_contact.png": "/tyhuang_v2/static/media/portfolio_contact.a9070988c6c5a3897ab7.png",
+    "static/media/portfolio_projects.png": "/tyhuang_v2/static/media/portfolio_projects.3409399d254cae52e8e7.png",
+    "static/media/forum_profile.png": "/tyhuang_v2/static/media/forum_profile.f5b7e4d2584d6cbd726c.png",
+    "static/media/forum_post.png": "/tyhuang_v2/static/media/forum_post.08fb3350f3d12ec630c4.png",
+    "static/media/portfolio_home.png": "/tyhuang_v2/static/media/portfolio_home.7b9ed36749932a9c5fa5.png",
+    "static/media/forum_allposts.png": "/tyhuang_v2/static/media/forum_allposts.f6ebe12bf548320e6006.png",
+    "static/media/forum_login.png": "/tyhuang_v2/static/media/forum_login.9bbc1231fe23ae36a563.png",
     "index.html": "/tyhuang_v2/index.html",
     "main.702fc617.css.map": "/tyhuang_v2/static/css/main.702fc617.css.map",
-    "main.9a3be422.js.map": "/tyhuang_v2/static/js/main.9a3be422.js.map",
+    "main.5462c5bc.js.map": "/tyhuang_v2/static/js/main.5462c5bc.js.map",
     "787.ca3550e9.chunk.js.map": "/tyhuang_v2/static/js/787.ca3550e9.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.702fc617.css",
-    "static/js/main.9a3be422.js"
+    "static/js/main.5462c5bc.js"
   ]
 }

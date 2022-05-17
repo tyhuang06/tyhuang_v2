@@ -1,11 +1,12 @@
-import React from "react";
-import aboutPic from "../assets/about.jpg";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import React from 'react';
+import aboutPic from '../assets/about.jpg';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
 	faJsSquare,
 	faPython,
 	faReact,
-} from "@fortawesome/free-brands-svg-icons";
+	faJava,
+} from '@fortawesome/free-brands-svg-icons';
 
 const About = () => {
 	return (
@@ -47,6 +48,7 @@ const About = () => {
 						<br />
 						<br />
 						Here are a few technologies I've been working with
+						recently
 						<div className="flex flex-col w-full text-navy font-medium mt-2">
 							<div className="flex w-full">
 								<div className="about-skills">
@@ -74,10 +76,10 @@ const About = () => {
 								</div>
 								<div className="about-skills">
 									<FontAwesomeIcon
-										icon={faPython}
+										icon={faJava}
 										className="mr-2"
 									/>
-									Django
+									Java
 								</div>
 							</div>
 						</div>

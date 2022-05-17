@@ -1,5 +1,6 @@
-import React from "react";
-import { Link } from "react-scroll";
+import React from 'react';
+import { Link } from 'react-scroll';
+import Resume from '../assets/resume/0517_2022_general.pdf';
 
 const Landing = () => {
 	return (
@@ -38,7 +39,9 @@ const Landing = () => {
 							</Link>
 						</button>
 						<button className="button-base button-gray">
-							Grab Resume
+							<a href={Resume} target="_blank" rel="noreferrer">
+								Get Resume
+							</a>
 						</button>
 					</div>
 				</div>

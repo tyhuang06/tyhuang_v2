@@ -1,25 +1,31 @@
 {
   "files": {
-    "main.css": "/tyhuang_v2/static/css/main.702fc617.css",
-    "main.js": "/tyhuang_v2/static/js/main.975adca8.js",
-    "static/js/787.ca3550e9.chunk.js": "/tyhuang_v2/static/js/787.ca3550e9.chunk.js",
+    "main.css": "/tyhuang_v2/static/css/main.72c2b2dd.css",
+    "main.js": "/tyhuang_v2/static/js/main.4fb6b622.js",
     "static/media/about.jpg": "/tyhuang_v2/static/media/about.e3c004102a45c60d316d.jpg",
+    "static/media/chat_realtime.png": "/tyhuang_v2/static/media/chat_realtime.2290c50bff06e27de46f.png",
     "static/media/portfolio_project.png": "/tyhuang_v2/static/media/portfolio_project.7ffa90dd86fa0d4b447f.png",
     "static/media/portfolio_contact.png": "/tyhuang_v2/static/media/portfolio_contact.a9070988c6c5a3897ab7.png",
     "static/media/portfolio_projects.png": "/tyhuang_v2/static/media/portfolio_projects.3409399d254cae52e8e7.png",
+    "static/media/chat_login.jpeg": "/tyhuang_v2/static/media/chat_login.669914b74fd8887e42e8.jpeg",
+    "static/media/chat_manage_group.png": "/tyhuang_v2/static/media/chat_manage_group.60550e09211c1558ff91.png",
+    "static/media/chat_create_group.png": "/tyhuang_v2/static/media/chat_create_group.f7e8cb65e01c6b957cb9.png",
+    "static/media/chat_notif.png": "/tyhuang_v2/static/media/chat_notif.3ed91c09910a3d11abbe.png",
+    "static/media/bomberman.jpeg": "/tyhuang_v2/static/media/bomberman.8f181bddb937ffdec489.jpeg",
+    "static/media/chat_home.png": "/tyhuang_v2/static/media/chat_home.4e4c58abafdecdd7666a.png",
     "static/media/forum_profile.png": "/tyhuang_v2/static/media/forum_profile.f5b7e4d2584d6cbd726c.png",
+    "static/media/chat_search.png": "/tyhuang_v2/static/media/chat_search.5272043126ae72d00459.png",
     "static/media/forum_post.png": "/tyhuang_v2/static/media/forum_post.08fb3350f3d12ec630c4.png",
     "static/media/portfolio_home.png": "/tyhuang_v2/static/media/portfolio_home.7b9ed36749932a9c5fa5.png",
+    "static/media/0517_2022_general.pdf": "/tyhuang_v2/static/media/0517_2022_general.8142d4ad3a44062f6e63.pdf",
     "static/media/forum_allposts.png": "/tyhuang_v2/static/media/forum_allposts.f6ebe12bf548320e6006.png",
-    "static/media/placeholder.jpg": "/tyhuang_v2/static/media/placeholder.3c0a422b9d39f22e1be7.jpg",
     "static/media/forum_login.png": "/tyhuang_v2/static/media/forum_login.9bbc1231fe23ae36a563.png",
     "index.html": "/tyhuang_v2/index.html",
-    "main.702fc617.css.map": "/tyhuang_v2/static/css/main.702fc617.css.map",
-    "main.975adca8.js.map": "/tyhuang_v2/static/js/main.975adca8.js.map",
-    "787.ca3550e9.chunk.js.map": "/tyhuang_v2/static/js/787.ca3550e9.chunk.js.map"
+    "main.72c2b2dd.css.map": "/tyhuang_v2/static/css/main.72c2b2dd.css.map",
+    "main.4fb6b622.js.map": "/tyhuang_v2/static/js/main.4fb6b622.js.map"
   },
   "entrypoints": [
-    "static/css/main.702fc617.css",
-    "static/js/main.975adca8.js"
+    "static/css/main.72c2b2dd.css",
+    "static/js/main.4fb6b622.js"
   ]
 }
